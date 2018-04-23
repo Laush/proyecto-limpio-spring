@@ -88,7 +88,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
 		System.out.println("Dia de turno: ------" + farNuevo.getDiaDeTurno());
 	}
 */
-	//Punto 2:buscar todas las farmacias de turno los dias martes
+	//Punto 2::buscar todas las farmacias de turno los dias martes
 	
 	@Test 
     @Transactional @Rollback(false) 
@@ -104,9 +104,10 @@ public class ConexionBaseDeDatosTest extends SpringTest {
     	far2.setNombre("FArmacity");
     	far2.setDiaDeTurno("Martes");
     	getSession().save(far2);
+   
     	
       	Farmacia far3 = new Farmacia();
-    	far3.setNombre("Vilela");
+    	far3.setNombre("Vilelas");
     	far3.setDiaDeTurno("Viernes");
     	getSession().save(far3);
     		
