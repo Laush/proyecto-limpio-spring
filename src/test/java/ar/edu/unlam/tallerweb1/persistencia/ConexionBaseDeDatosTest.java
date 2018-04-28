@@ -127,7 +127,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
      
     }
 
-	//Punto 3
+	//Punto 3 //segundo commit
 	@Test 
     @Transactional @Rollback(false) 
 	@SuppressWarnings("unchecked")
