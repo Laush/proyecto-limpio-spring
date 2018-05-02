@@ -42,7 +42,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
 		Usuario usuarioNuevo = getSession().get(Usuario.class, 1L);
 
 		assertThat(usuarioNuevo.getId()).isEqualTo(1L);
-		System.out.println("El usuario tien id ------" + usuarioNuevo.getEmail());
+		System.out.println("El usuario tiene id ------" + usuarioNuevo.getEmail());
 	}
 
 	@Test // agregamos una calle y numero
@@ -170,14 +170,79 @@ public class ConexionBaseDeDatosTest extends SpringTest {
    	
     	}
     	
-     
+	}
+    	
+   // Punto 4-​ ​Hacer​ ​con​ ​junit​ ​un​ ​test​ ​que​ ​busque​ ​todas​ ​las​ ​farmacias​ ​de​ ​un​ ​barrio.  
+    	
+    	@Test
+    	@Transactional @Rollback(true)
+    	@SuppressWarnings("unchecked")
+    	public void todasLasFarmaciasDeUnBarrio(){
+    		
+    		// Creación de las farmacias y los barrios
+    		
+    		Barrio bar1= new Barrio();
+    		bar1.setNombre("San Justo");
+    		getSession().save(bar1);
+    		
+    		Barrio bar2= new Barrio();
+    		bar2.setNombre("Mataderos");
+    		getSession().save(bar1);
+    		
+    		Direccion dir1= new Direccion();
+        	dir1.setCalle("ocampo");
+        	dir1.setBarrio(bar1);
+        	getSession().save(dir1);
+        	
+        	Direccion dir2= new Direccion();
+        	dir2.setCalle("peru");
+        	dir2.setBarrio(bar1);
+        	getSession().save(dir2);
+        	
+        	Direccion dir3= new Direccion();
+        	dir3.setCalle("alberdi");
+        	dir3.setBarrio(bar2);
+        	getSession().save(dir3);
+    		    		
+    		Farmacia far1= new Farmacia();
+    		far1.setNombre("Pigmento");
+    		far1.setDireccion(dir1);
+    		getSession().save(far1);
+    		
+    		Farmacia far2= new Farmacia();
+    		far2.setNombre("Vilela");
+    		far2.setDireccion(dir2);
+    		getSession().save(far2);
+    		
+    		Farmacia far3= new Farmacia();
+    		far3.setNombre("Farmacity");
+    		far3.setDireccion(dir3);
+    		getSession().save(far3);
+    		
+    		    			 
+    		List<Farmacia> lista=
+    				getSession().createCriteria(Farmacia.class) //seria como el from
+    				.createAlias("dir", "dir")
+    				.createAlias("dir.barrio","barrio")
+        	        .add(Restrictions.eq("barrio.nombre","Mataderos")) //seria como el where
+                    .list();
+        	
+        	System.out.println("<<Punto 4>>" );
+        	for(Farmacia listado:lista){
+        		
+        	System.out.println("Farmacia:" + listado.getNombre() + " Barrio: "+ listado.getNombre());
+    		
+    	}
     }
-	
-	
-	
-	
-	  
-	
+       	
+        		
+   
+    	
+ /* Punto 5- Usando path variables, hacer un action que reciba una operación y sus
+   dos operandos y que lleve a una vista que muestra la siguiente frase “El resultado 
+   de​ sumar 3 y​ 6 da​ 9​ ”.En caso que no pueda realizarse la operación se​ ​debe​ 
+   ​llevar​ ​a​ ​otra​ ​vista​ ​diferente​ ​donde​ ​se​ ​muestra​ ​un​ ​mensaje​ ​descriptivo. */
+    		
 	
 	
 }
