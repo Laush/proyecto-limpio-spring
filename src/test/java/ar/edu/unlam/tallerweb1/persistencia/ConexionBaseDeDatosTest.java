@@ -124,7 +124,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
      
     }
 
-	//Punto 3 //segundo commit
+	//Punto 3 - listar todas las farmacias de una calle
 	@Test 
     @Transactional @Rollback(false) 
 	@SuppressWarnings("unchecked")
