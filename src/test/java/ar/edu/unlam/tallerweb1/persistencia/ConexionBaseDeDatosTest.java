@@ -72,15 +72,12 @@ public class ConexionBaseDeDatosTest extends SpringTest {
 	@Transactional
 	@Rollback(false)
 	public void agregarFarmacia() {
-
 		Farmacia far = new Farmacia();
 		far.setNombre("Pigmento");
 		far.setTelefono("44612323");
 		far.setDiaDeTurno("Martes");
 		getSession().save(far);
-
 		Farmacia farNuevo = getSession().get(Farmacia.class, 1L);
-
 		assertThat(farNuevo.getId()).isEqualTo(1L);
 		System.out.println("Id ------" + farNuevo.getId());
 		System.out.println("El nombre es ------" + farNuevo.getNombre());
@@ -172,7 +169,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
     	
 	}
     	
-   // Punto 4-​ ​Hacer​ ​con​ ​junit​ ​un​ ​test​ ​que​ ​busque​ ​todas​ ​las​ ​farmacias​ ​de​ ​un​ ​barrio.  
+   // Punto 4-​ ​Hacer​ ​con​ ​junit​ ​un​ ​test​ ​que​ ​busque​ ​todas​ ​las​ ​farmacias​ ​de​ ​un​ ​barrio.  
     	
     	@Test
     	@Transactional @Rollback(true)
@@ -240,8 +237,8 @@ public class ConexionBaseDeDatosTest extends SpringTest {
     	
  /* Punto 5- Usando path variables, hacer un action que reciba una operación y sus
    dos operandos y que lleve a una vista que muestra la siguiente frase “El resultado 
-   de​ sumar 3 y​ 6 da​ 9​ ”.En caso que no pueda realizarse la operación se​ ​debe​ 
-   ​llevar​ ​a​ ​otra​ ​vista​ ​diferente​ ​donde​ ​se​ ​muestra​ ​un​ ​mensaje​ ​descriptivo. */
+   de​ sumar 3 y​ 6 da​ 9​ ”.En caso que no pueda realizarse la operación se​ ​debe​ 
+   ​llevar​ ​a​ ​otra​ ​vista​ ​diferente​ ​donde​ ​se​ ​muestra​ ​un​ ​mensaje​ ​descriptivo. */
     		
 	
 	
