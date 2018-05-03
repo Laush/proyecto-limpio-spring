@@ -235,9 +235,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
     	}
     }
        	
-        		
-   
-    	
+      	
  /* Punto 5- Usando path variables, hacer un action que reciba una operación y sus
    dos operandos y que lleve a una vista que muestra la siguiente frase “El resultado 
    de​ sumar 3 y​ 6 da​ 9​ ”.En caso que no pueda realizarse la operación se​ ​debe​ 
