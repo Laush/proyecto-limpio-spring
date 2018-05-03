@@ -55,11 +55,6 @@ public class ConexionBaseDeDatosTest extends SpringTest {
 		dir.setNumero("2020");
 		getSession().save(dir);
 
-		/*
-		 * assertThat(getSession().save(dir));
-		 * System.out.println(dir.toString());
-		 */
-
 		Direccion dirNuevo = getSession().get(Direccion.class, 1L);
 
 		assertThat(dirNuevo.getId()).isEqualTo(1L);
@@ -184,7 +179,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
     		
     		Barrio bar2= new Barrio();
     		bar2.setNombre("Mataderos");
-    		getSession().save(bar1);
+    		getSession().save(bar2);
     		
     		Direccion dir1= new Direccion();
         	dir1.setCalle("ocampo");
