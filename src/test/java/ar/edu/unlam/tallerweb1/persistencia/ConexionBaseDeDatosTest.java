@@ -164,7 +164,7 @@ public class ConexionBaseDeDatosTest extends SpringTest {
     	
 	}
     	
-   // Punto 4-​ ​Hacer​ ​con​ ​junit​ ​un​ ​test​ ​que​ ​busque​ ​todas​ ​las​ ​farmacias​ ​de​ ​un​ ​barrio.  
+   // Punto 4-​ ​Hacer​ ​con​ ​junit​ ​un​ ​test​ ​que​ ​busque​ ​todas​ ​las​ ​farmacias​ ​de​ ​un​ ​barrio::  
     	
     	@Test
     	@Transactional @Rollback(true)
