@@ -232,6 +232,9 @@ public class ConexionBaseDeDatosTest extends SpringTest {
    dos operandos y que lleve a una vista que muestra la siguiente frase “El resultado 
    de​ sumar 3 y​ 6 da​ 9​ ”.En caso que no pueda realizarse la operación se​ ​debe​ 
    ​llevar​ ​a​ ​otra​ ​vista​ ​diferente​ ​donde​ ​se​ ​muestra​ ​un​ ​mensaje​ ​descriptivo. */
+    	
+    	
+    	
     		
 	
 	
