@@ -32,7 +32,18 @@ public class ControladorOperacion {
 			modelo.put("resultado", resultado);
 			return new ModelAndView("resultado-operacion", modelo);
 		}
-
+        //resta
+		if(operacionDeseada.equalsIgnoreCase("restar")) {
+			Integer resultado = primerOperando - segundoOperando;
+			modelo.put("resultado", resultado);
+			return new ModelAndView("resultado-operacion", modelo);
+		}
+		//division
+		if(operacionDeseada.equalsIgnoreCase("dividir") & segundoOperando!=0) {
+			Integer resultado = primerOperando / segundoOperando;
+			modelo.put("resultado", resultado);
+			return new ModelAndView("resultado-operacion", modelo);
+		} //si el segundo operando es cero da el mismo error que si la operacion fuera incorrecta
 		
 		
 		//Si la operación indicada no existe, muestro pantalla de error
