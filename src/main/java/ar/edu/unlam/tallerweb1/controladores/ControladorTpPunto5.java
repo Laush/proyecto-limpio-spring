@@ -11,8 +11,8 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 public class ControladorTpPunto5{
 	
-	//http://localhost:8080/proyecto-limpio-spring/operacion/suma/operador1/4/operador2/5
-	@RequestMapping(value="tpPunto5/Operacion/{operacion}/operador1/{operador1}/operador2/{operador2}",method=RequestMethod.GET)
+	//http://localhost:8080/proyecto-limpio-spring/operacion/sumar/operador1/4/operador2/5
+	@RequestMapping(value="/Operacion/{operacion}/operador1/{operador1}/operador2/{operador2}",method=RequestMethod.GET)
 	public ModelAndView irAlaVistaOperacion (@PathVariable String operacion,@PathVariable Integer operador1,@PathVariable Integer operador2) {
 				
 		switch (operacion) {
