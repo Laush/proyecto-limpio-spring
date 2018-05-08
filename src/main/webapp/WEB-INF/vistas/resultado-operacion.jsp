@@ -12,7 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Operación: ${operacionDeseada}</title>
 
-<h1>Operacion: ${operacionDeseada}</h1>
+<h1 style="color:green">Operacion: ${operacionDeseada}</h1>
 
 <h2>El resultado de ${operacionDeseada} ${primerOperando} y ${segundoOperando} da ${resultado}</h2>
 </head>

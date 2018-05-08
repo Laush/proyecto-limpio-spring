@@ -23,6 +23,8 @@
 					<form:input path="password" type="password" id="password" class="form-control"/>     		  
 					
 					<button class="btn btn-lg btn-primary btn-block" Type="Submit"/>Login</button>
+					
+					
 				</form:form>
 				
 				<%--Bloque que es visible si el elemento error no está vacío	--%>
