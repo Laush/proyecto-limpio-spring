@@ -10,11 +10,11 @@
 	    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	</head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Error</title>
+<title>Operación: ${operacionDeseada}</title>
 
-<h1>Error: Operación Inválida</h1>
+<h1>Operacion: ${operacionDeseada}</h1>
 
-<h2>La operación ${operacionDeseada} no es válida.</h2>
+<h2>El resultado de ${operacionDeseada} ${primerOperando} y ${segundoOperando} da ${resultado}</h2>
 </head>
 <body>
 

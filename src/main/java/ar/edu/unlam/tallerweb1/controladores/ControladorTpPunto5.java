@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
-public class ControladorTpPunto5{
+public class ControladorTpPunto5{/*
 	
 	//http://localhost:8080/proyecto-limpio-spring/operacion/sumar/operador1/4/operador2/5
 	@RequestMapping(value="/Operacion/{operacion}/operador1/{operador1}/operador2/{operador2}",method=RequestMethod.GET)
